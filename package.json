@@ -1,5 +1,5 @@
 {
-  "name": "extract-prop",
+  "name": "extractProp",
   "version": "0.0.1",
   "description": "Delete a property from an object and return it",
   "main": "extract-prop.js",
@@ -7,13 +7,21 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicksheffield/extract-prop.git"
+  },
   "keywords": [
     "extract",
     "property",
     "object"
-  ]
+  ],
+  "author": "Nick Sheffield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicksheffield/extract-prop/issues"
+  },
+  "homepage": "https://github.com/nicksheffield/extract-prop"
 }
