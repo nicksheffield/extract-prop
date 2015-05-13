@@ -1,0 +1,19 @@
+{
+  "name": "extract-prop",
+  "version": "0.0.1",
+  "description": "Delete a property from an object and return it",
+  "main": "extract-prop.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "extract",
+    "property",
+    "object"
+  ]
+}
