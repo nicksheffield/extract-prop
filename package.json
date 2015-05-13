@@ -1,6 +1,6 @@
 {
   "name": "extract-prop",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Delete a property from an object and return it",
   "main": "extract-prop.js",
   "directories": {

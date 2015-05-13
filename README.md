@@ -18,6 +18,7 @@ var body = {
 };
 
 var pop = extractProp(body, 'populate');
+var order = extractProp(body, 'order', 'default value');
 
 console.log(body);
 /*
@@ -27,5 +28,10 @@ console.log(body);
 console.log(pop);
 /*
 	will log: 'posts'
+*/
+
+console.log(order);
+/*
+	will log: 'default value'
 */
 ```
