@@ -7,10 +7,12 @@ var body = {
 };
 
 var pop = extractProp(body, 'populate');
+var order = extractProp(body, 'order', 'default value');
 
 var tests = [
 	body.populate === undefined,
-	pop === 'posts'
+	pop === 'posts',
+	order === 'default value'
 ];
 
 for(var i=0; i<tests.length; i++){
