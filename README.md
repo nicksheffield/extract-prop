@@ -17,8 +17,12 @@ var body = {
 	populate: 'posts'
 };
 
+// this value exists in the object
 var pop = extractProp(body, 'populate');
+// this value doesn't exist in the object, but has a fallback value
 var order = extractProp(body, 'order', 'default value');
+// this value just doesn't exist in the object
+var nonexistent = extractProp(body, 'nonexistent');
 
 console.log(body);
 /*
@@ -33,5 +37,10 @@ console.log(pop);
 console.log(order);
 /*
 	will log: 'default value'
+*/
+
+console.log(nonexistent);
+/*
+	will log: undefined
 */
 ```
