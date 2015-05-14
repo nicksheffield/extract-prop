@@ -7,11 +7,13 @@ var body = {
 };
 
 var pop = extractProp(body, 'populate');
+var doesntExist = extractProp(body, 'doesntExist');
 var order = extractProp(body, 'order', 'default value');
 
 var tests = [
 	body.populate === undefined,
 	pop === 'posts',
+	doesntExist === undefined,
 	order === 'default value'
 ];
 
