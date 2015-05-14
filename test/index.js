@@ -1,31 +1,47 @@
 var extractProp = require('../extract-prop');
 
-var body = {
-	name: 'frank',
-	email: 'frank@example.com',
-	populate: 'posts'
-};
-
-var pop = extractProp(body, 'populate');
-var doesntExist = extractProp(body, 'doesntExist');
-var order = extractProp(body, 'order', 'default value');
-
-var tests = [
-	body.populate === undefined,
-	pop === 'posts',
-	doesntExist === undefined,
-	order === 'default value'
-];
-
-for(var i=0; i<tests.length; i++){
-	console.log(i, tests[i]);
-}
-console.log('=======');
-var pass = tests.reduce(function(bool, old){
-	return old && bool;
-}, true);
-if(pass){
-	console.log('All tests passed');
-}else{
-	console.log('Some tests failed');
-}
+describe('extractProp()', function(){
+	
+	it('extract property', function(done){
+		var body = {
+			name: 'frank',
+			email: 'frank@example.com',
+			populate: 'posts'
+		};
+		
+		if(extractProp(body, 'populate') === 'posts'){
+			done();
+		}else{
+			throw 'property not extracted correctly';
+		}
+	});
+	
+	it('extract undefined property', function(done){
+		var body = {
+			name: 'frank',
+			email: 'frank@example.com',
+			populate: 'posts'
+		};
+		
+		if(extractProp(body, 'order') === undefined){
+			done();
+		}else{
+			throw 'extracted value was not undefined';
+		}
+	});
+	
+	it('default value used if property undefined', function(done){
+		var body = {
+			name: 'frank',
+			email: 'frank@example.com',
+			populate: 'posts'
+		};
+		
+		if(extractProp(body, 'order', 'default') === 'default'){
+			done();
+		}else{
+			throw 'default value did not work';
+		}
+	});
+	
+});

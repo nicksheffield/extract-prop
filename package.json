@@ -1,6 +1,6 @@
 {
   "name": "extract-prop",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Delete a property from an object and return it",
   "main": "extract-prop.js",
   "directories": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/nicksheffield/extract-prop/issues"
   },
-  "homepage": "https://github.com/nicksheffield/extract-prop"
+  "homepage": "https://github.com/nicksheffield/extract-prop",
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
 }
